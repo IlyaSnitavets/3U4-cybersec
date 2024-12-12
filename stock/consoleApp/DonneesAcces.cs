@@ -70,12 +70,11 @@ namespace consoleApp
         public static void BDCreerUtilisateur(Formulaires.FormulaireNouveauCompte compte)
         {
             sqlite_conn.Open();
-            SqliteCommand sqlite_cmd;
-            sqlite_cmd = sqlite_conn.CreateCommand();
-            sqlite_cmd.CommandText = "INSERT INTO MUtilisateur (nom, motDePasse, nas) " +
-                                     "VALUES('" + compte.Nom + "', '" +
-                                     DonneesSecurite.HashThePassword(compte.MotDePasse) + "', '" +
-                                     DonneesSecurite.Encrypt(compte.NAS) + "'); ";
+            SqliteCommand sqlite_cmd = sqlite_conn.CreateCommand();
+            sqlite_cmd.CommandText = "INSERT INTO MUtilisateur (nom, motDePasse, nas) VALUES (@nom, @motDePasse, @nas)";
+            sqlite_cmd.Parameters.AddWithValue("@nom", compte.Nom);
+            sqlite_cmd.Parameters.AddWithValue("@motDePasse", DonneesSecurite.HashThePassword(compte.MotDePasse));
+            sqlite_cmd.Parameters.AddWithValue("@nas", DonneesSecurite.Encrypt(compte.NAS));
             sqlite_cmd.ExecuteNonQuery();
             sqlite_conn.Close();
         }

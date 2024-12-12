@@ -2,7 +2,7 @@
 id: r27
 title: Rencontre 27 - Injection SQL (défense)
 sidebar_label: R27 - Injection SQL (défense)
-draft: false
+draft: true
 hide_table_of_contents: false
 ---
 
@@ -31,20 +31,11 @@ Quand on concatène **"SELECT * FROM table WHERE id = " + id + ";"**:
 - pour 1000 requêtes avec des id différents, on va payer compilation et exécution à chaque fois
 - on paie environ 20$
 
-## Il y a encore des applications avec des failles SQL?
+## Est-ce qu'il reste des failles d'injections SQL?
 
 Certainement. Règle pour votre future carrière:
 - traverser le code des applications sur lesquelles vous travaillerez pour chercher des concaténations de requêtes SQL
-- éduquer patiemment et gentiment des collègues qui le font encore, éventuellement en faisant une démonstration d'injection catastrophique (DROP TABLE ...).
-
-## Activité
-
-En reprenant l'application escuelle, tu vas devoir corriger le code pour éviter les injections SQL.
-
-Il y a un exemple de requête qui est déjà au bon format pour la création d'une note.
-
-L'usage de copilot ou chatGPT est autorisé pour cette activité mais il reste important de comprendre le
-code produit.
+- éduquer patiemment et gentiment des collègues qui le font.
 
 ## TP / Correctif sur le code fourni
 
@@ -55,6 +46,6 @@ RAPPEL : pour valider que ton correctif fonctionne, tu dois avoir un exploit qui
 2. l'exploit fonctionne sur le commit qui précède ton correctif
 3. l'exploit ne fonctionne plus après ton correctif
 
-Autrement dit, tu devrais commit ton correctif **UNIQUEMENT** si tu as validé que l'exploit est désamorcé.
+Autrement dit, tu ne devrais commit ton correctif **UNIQUEMENT** si tu as validé que l'exploit est désamorcé.
 
 

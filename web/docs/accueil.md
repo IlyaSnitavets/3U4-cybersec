@@ -31,7 +31,7 @@ Dans ce cours, nous allons aborder la cybersécurité en 3 morceaux:
 | [R13 → Stratégies de sauvegarde](cours/r13)                 | 10%                             |
 | [R14 → Pare-feu et ports d'écoute](cours/r14)               | 30%                             |
 | [R15 → NAT et services d'accès distant](cours/r15)          | 40%                             |
-| [R16 → Malware et antivirus](cours/r16)                     | 60%                             |
+| [R16 → Virus et antivirus](cours/r16)                       | 60%                             |
 | [R17 → Évaluation de l'inventaire](cours/r17)               | 80%                             |
 | [R18 → Bonnes pratiques de cybersécurité ](cours/r18)       | 100% remise du TP2              |
 | [R19 → Examen formatif #2](cours/r19)                       | --                              |

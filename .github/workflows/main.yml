@@ -26,8 +26,8 @@ jobs:
         working-directory: ./stock/consoleApp
       - name: Release
         uses: softprops/action-gh-release@v2
-        with: 
-          files: stock/consoleApp/bin/Release/net8.0/win-x64/publish/consoleApp.exe
+        with:
+          files: stock/consoleApp/bin/Release/net8.0/win-x64/publish/ScriptSharp.exe
           tag_name: TaxesRevenus
           body: Appli pour le cours de cybersec.
           make_latest: true

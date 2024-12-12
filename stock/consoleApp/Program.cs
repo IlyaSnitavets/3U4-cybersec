@@ -163,8 +163,8 @@ class Program
         DonneesAcces.BDCreerUtilisateur(justin);
 
         Formulaires.FormulaireNouveauCompte stephen = new Formulaires.FormulaireNouveauCompte();
-        stephen.MotDePasse = "StephDaBest";
-        stephen.MotDePasseConfirmation = "StephDaBest";
+        stephen.MotDePasse = "stephen the best";
+        stephen.MotDePasseConfirmation = "stephen the best";
         stephen.NAS = "123456123";
         stephen.Nom = "Stephen Harper";
         DonneesAcces.BDCreerUtilisateur(stephen);
@@ -184,8 +184,8 @@ class Program
         DonneesAcces.BDCreerUtilisateur(jean);
 
         Formulaires.FormulaireNouveauCompte kim = new Formulaires.FormulaireNouveauCompte();
-        kim.MotDePasse = "GirlPower";
-        kim.MotDePasseConfirmation = "GirlPower";
+        kim.MotDePasse = "Who's the girl!";
+        kim.MotDePasseConfirmation = "Who's the girl!";
         kim.NAS = "123123123";
         kim.Nom = "Kim Campbell";
         DonneesAcces.BDCreerUtilisateur(kim);

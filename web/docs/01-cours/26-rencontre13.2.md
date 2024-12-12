@@ -2,7 +2,7 @@
 id: r26
 title: Rencontre 26 - Injection SQL (attaque)
 sidebar_label: R26 - Injection SQL (attaque)
-draft: false
+draft: true
 hide_table_of_contents: false
 ---
 
@@ -30,21 +30,15 @@ Les mauvais programmeurs qui concatènent des données utilisateurs dans des req
 
 Par contre, quand la faille est là, il n'y a aucune limite au code qu'on peut exécuter. En bref, on est morts.
 
+## Comment en trouver dans le code d'une application existante
+
+
 ## Activité / Exemple
+L'application vous demande un nom d'utilisateur et vous tapez 
+```sql
+'); DROP DATABASE test; -- 
+```
 
-1. clone le repo du cours avec ton client git préféré
-2. dans le dossier stock
-3. dans le dossier escuelle
-4. tu trouveras un fichier sln pour une application
-5. il s'agit d'une application qui enregistre des comptes et leurs notes
-6. familiarise toi avec l'application en créant 2-3 comptes avec chacun 2-3 notes
-7. tu peux aussi regarder à quoi ressemble la BD avec DataGrip
+Ces données sont ensuite envoyées au serveur dans le code de l'application.
 
-Une fois que tu as pris connaissance de l'application, passe à travers le fichier [injections](https://github.com/departement-info-cem/3U4-cybersec/blob/main/stock/esscuelle/injections.md)
-
-N'hésite pas à poser des questions au prof.
-
-## TP3
-
-En t'inspirant un peu / beaucoup de l'activité, tente de voir si tu peux trouver une attaque d'injection SQL sur l'application du TP3.
 

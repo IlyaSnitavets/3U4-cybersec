@@ -2,9 +2,11 @@
 id: r24
 title: Rencontre 24 - Chiffrement symétrique (attaque)
 sidebar_label: R24 - Chiffrement symétrique (attaque)
-draft: false
+draft: true
 hide_table_of_contents: false
 ---
+
+
 
 # Rencontre 12.2 : Encryption symmétrique, on attaque
 
@@ -12,7 +14,7 @@ hide_table_of_contents: false
 
 Un couple de fonctions *encrypt(key, message)* et *decrypt(key, message)* qui permettent de 
 1. transformer une message en bouillie illisible
-2. récupérer le message à partir de la bouillie illisible pour peu qu'on utilise la même **clé**
+2. récupérer le message à partir de la bouillie illisible pour peu qu'on utilise la même clé
 
 ## Le code de César, un vieil exemple
 
@@ -60,23 +62,16 @@ Alors on peut juste mettre tous les caractères possibles dans le message et reg
 - "bcdefghijklmnopqrstuvwxyza" message encrypté
 - ça nous donne directement la table de traduction lettre par lettre
 
-La faiblesse ici est que l'algo d'encryptage fonctionne lettre par lettre:
+Le problème ici est que l'algo d'encryptage fonctionne lettre par lettre:
 - le caractère n est encodé dans le caractère n
 - si on change un seul caractère dans le texte clair, il y a un seul caractère qui change dans le crypté
-- on dit que l'algorithme est **local**
-
-Cette technique pourra être utilisée pour tous les codes de transposition:
-- chaque lettre est transformée en une autre lettre
-- je peux donc voir comment chaque lettre est transformée
-- et construire la table de traduction
+- on dit que l'algorithme est local
 
 ### Exemple brutal
 
 Pour tous les décalages possibles, on décode le message et on regarde si le message décodé a du sens.
 
 Si ton alphabet a 26 lettres, il y a 26 décalages possibles pas plus.
-
-Pour voir si les messages ont du sens tu peux demander à une IA par exemple.
 
 ### Exercices
 
@@ -87,8 +82,10 @@ Retranscris tes découvertes dans un fichier **cesar.md** dans ton dossier / rep
 - essaie de trouver le message en clair et la clé utilisée
 - décris l'exploit que tu as utilisé
 - valide tes réponses en encodant ton message clair avec la clé et vérifie que le crypté est le même
-- tu peux aussi de demander à chatGPT de décoder le message, voir ce que ça donne
 
-### Reste du cours
 
-Utilise ce qu'on a vu pour voir si tu peux casser l'encryption de la BD en utilisant uniquement le .db.
+
+## Si il y a symétrique, il doit y avoir asymétrique
+
+
+

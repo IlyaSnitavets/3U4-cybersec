@@ -4,7 +4,6 @@
 - https://github.com/hashtopolis/server possibility de hashcat sur plusieurs machines (labo)
 - https://ctfd.io/
 - https://fr.wikipedia.org/wiki/Common_Vulnerability_Scoring_System
-- https://github.com/hash3liZer/evilginx2
 
 ## Axes pour construire le cours
 - répondre aux questions populaires
